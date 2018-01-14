@@ -1,0 +1,21 @@
+{
+  "name": "vsts-task-reconfigure-xcode-project-file",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@git.bouvet.no/otweb/vsts-task-prepareios.git"
+  },
+  "author": "Bjarte Bore",
+  "license": "MIT",
+  "homepage": "https://www.olavstoppen.no",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "vsts-task-lib": "2.0.2-preview",
+    "xcode-node": "^1.0.2"
+  }
+}
