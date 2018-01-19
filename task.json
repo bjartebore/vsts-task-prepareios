@@ -9,7 +9,7 @@
   "version": {
     "Major": 0,
     "Minor": 1,
-    "Patch": 7
+    "Patch": 9
   },
   "inputs" : [
     {
@@ -27,6 +27,14 @@
         "defaultValue": "**/*.pbxproj",
         "required": true,
         "helpMarkDown": "Use Glob syntax to match the filepath to the files we want to manipulate"
+    },
+    {
+        "name": "DevelopmentTeam",
+        "type": "string",
+        "label": "The development team id",
+        "defaultValue": "$(DEVELOPMENT_TEAM)",
+        "required": true,
+        "helpMarkDown": "The development team id"
     },
     {
         "name": "ProductBundleIdentifier",

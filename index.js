@@ -10,6 +10,7 @@ const run = () => {
     const filePathGlob = tl.getInput('FilePath', true);
     const productBundleIdentifier = tl.getInput('ProductBundleIdentifier', true);
     const productName = tl.getInput('ProductName', true);
+    const developmentTeam = tl.getInput('DevelopmentTeam', true);
     const ensureProvisioningStyleManual = tl.getBoolInput('ensureProvisioningStyleManual');
     // Paths
     const workingDir = tl.getPathInput('cwd');
@@ -35,6 +36,14 @@ const run = () => {
           configuration,
           'PRODUCT_NAME',
           productName);
+
+        project.configuration.setUserDefinedTargetConfiguration(
+          target.name,
+          configuration,
+          'DEVELOPMENT_TEAM',
+          developmentTeam);
+
+
       });
 
       if(ensureProvisioningStyleManual) {
