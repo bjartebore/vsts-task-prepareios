@@ -9,8 +9,16 @@
   "version": {
     "Major": 0,
     "Minor": 1,
-    "Patch": 13
+    "Patch": 17
   },
+  "groups": [
+    {
+        "name": "sign",
+        "displayName": "Signing & provisioning",
+        "isExpanded": false
+    }
+  ],
+
   "inputs" : [
     {
         "name": "ConfigurationName",
@@ -67,6 +75,26 @@
         "defaultValue": "true",
         "required": false,
         "helpMarkDown": "Updates the pbxproj with ProvisioningStyle set to manual"
+    },
+    {
+        "name": "signingIdentity",
+        "type": "string",
+        "label": "Override signing identity (optional)",
+        "defaultValue": "",
+        "required": false,
+        "helpMarkDown": "Sets the signing identity",
+        "groupName": "sign",
+        "visiblRule": "ensureProvisioningStyleManual == true"
+    },
+    {
+        "name": "provisioningProfileUUID",
+        "type": "string",
+        "label": "Provisioning profile UUID (optional)",
+        "defaultValue": "",
+        "required": false,
+        "helpMarkDown": "Sets a new provisioning profile UUID",
+        "groupName": "sign",
+        "visiblRule": "ensureProvisioningStyleManual == true"
     }
   ],
   "instanceNameFormat": "Updates xcode configuration for: $(Configuration)",
